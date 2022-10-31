@@ -43,11 +43,11 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push charts to GHCR
-        # mkdir -p in case you are filling gaps with previously released charts
-        # there would be nothing for cr to do and therefore no dir created in
-        # "Run chart-releaser" step
+        # when filling gaps with previously released charts, cr would create
+        # nothing in .cr-release-packages/, and the original globbing character
+        # would be preserved, causing a non-zero exit. Set nullglob to fix this
         run: |
-          mkdir -p .cr-release-packages
+          shopt -s nullglob
           for pkg in .cr-release-packages/*; do
             if [ -z "${pkg:-}" ]; then
               break
