@@ -43,7 +43,11 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push charts to GHCR
+        # mkdir -p in case you are filling gaps with previously released charts
+        # there would be nothing for cr to do and therefore no dir created in
+        # "Run chart-releaser" step
         run: |
+          mkdir -p .cr-release-packages
           for pkg in .cr-release-packages/*; do
             if [ -z "${pkg:-}" ]; then
               break
