@@ -10,8 +10,9 @@ jobs:
     # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
     # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
     permissions:
-      contents: write
-      packages: write
+      contents: write # needed to write releases
+      packages: write # needed for ghcr access
+      id-token: write # needed for keyless signing
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -42,7 +43,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: sigstore/cosign-installer@main
       - name: Push charts to GHCR
+        env:
+          COSIGN_EXPERIMENTAL: 1
         # when filling gaps with previously released charts, cr would create
         # nothing in .cr-release-packages/, and the original globbing character
         # would be preserved, causing a non-zero exit. Set nullglob to fix this
@@ -53,4 +57,8 @@ jobs:
               break
             fi
             helm push "${pkg}" oci://ghcr.io/${GITHUB_REPOSITORY_OWNER}/charts
+            name=${pkg%-*}
+            version=${pkg%.*}
+            version=${version#*-}
+            cosign sign ghcr.io/${GITHUB_REPOSITORY_OWNER}/charts/"${name}":"${version}"
           done
