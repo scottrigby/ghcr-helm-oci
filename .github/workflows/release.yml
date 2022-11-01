@@ -57,8 +57,9 @@ jobs:
               break
             fi
             helm push "${pkg}" oci://ghcr.io/${GITHUB_REPOSITORY_OWNER}/charts
-            name=${pkg%-*}
-            version=${pkg%.*}
+            file=${pkg##*/}
+            name=${file%-*}
+            version=${file%.*}
             version=${version#*-}
             cosign sign ghcr.io/${GITHUB_REPOSITORY_OWNER}/charts/"${name}":"${version}"
           done
