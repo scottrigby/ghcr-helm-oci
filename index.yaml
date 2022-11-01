@@ -3,6 +3,16 @@ entries:
   bar:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-01T01:59:51.056398088Z"
+    description: A Helm chart for Kubernetes
+    digest: 6fb57dd3690136b5fc1da1e91beed68e2257f6a89386e6b138c1ec3bfee4777e
+    name: bar
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/bar-0.1.2/bar-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-01T01:52:06.363363346Z"
     description: A Helm chart for Kubernetes
     digest: ad39c633d6029be54797e4bd8594e7ebc487a3e03b89c46c2d0c10eab1b26693
@@ -24,6 +34,16 @@ entries:
   foo:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-01T01:59:51.313874158Z"
+    description: A Helm chart for Kubernetes
+    digest: 99f4d8b2092520ea20321a7385ea58ae3333668e28b772ed8553016d68480914
+    name: foo
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/foo-0.1.3/foo-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-01T01:52:06.492300378Z"
     description: A Helm chart for Kubernetes
     digest: ba7303ed41170676de593454e8a1d9df2f361141b4c4206314ae115e00606085
@@ -42,4 +62,4 @@ entries:
     urls:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/foo-0.1.1/foo-0.1.1.tgz
     version: 0.1.1
-generated: "2022-11-01T01:52:06.492314478Z"
+generated: "2022-11-01T01:59:51.313890958Z"
