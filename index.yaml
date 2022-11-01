@@ -41,6 +41,17 @@ entries:
     urls:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/bar-0.1.0/bar-0.1.0.tgz
     version: 0.1.0
+  baz:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-01T17:11:57.781831908Z"
+    description: A Helm chart for Kubernetes
+    digest: 25fc5be038cc649e664a62a33bb37141f87d39b3dc38511239c8b61f7fd87462
+    name: baz
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/baz-0.1.0/baz-0.1.0.tgz
+    version: 0.1.0
   foo:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -82,4 +93,4 @@ entries:
     urls:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/foo-0.1.1/foo-0.1.1.tgz
     version: 0.1.1
-generated: "2022-11-01T02:05:17.449086729Z"
+generated: "2022-11-01T17:11:57.781850008Z"
