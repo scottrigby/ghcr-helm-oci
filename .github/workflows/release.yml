@@ -60,5 +60,5 @@ jobs:
             file=${pkg##*/}       # extracts file name from full directory path
             name=${file%-*}       # extracts chart name from filename
             digest=$(cat .digest | awk -F "[, ]+" '/Digest/{print $NF}')
-            cosign sign ghcr.io/"${GITHUB_REPOSITORY_OWNER}"/charts/"${name}":"${digest}"
+            cosign sign ghcr.io/"${GITHUB_REPOSITORY_OWNER}"/charts/"${name}"@"${digest}"
           done
