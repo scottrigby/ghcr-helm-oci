@@ -56,10 +56,9 @@ jobs:
             if [ -z "${pkg:-}" ]; then
               break
             fi
-            helm push "${pkg}" oci://ghcr.io/"${GITHUB_REPOSITORY_OWNER}"/charts
+            helm push "${pkg}" oci://ghcr.io/"${GITHUB_REPOSITORY_OWNER}"/charts > .digest
             file=${pkg##*/}       # extracts file name from full directory path
             name=${file%-*}       # extracts chart name from filename
-            noext=${file%.tgz}    # extracts string (NAME-1.2.3) without extension to get version below
-            version=${noext##*-}  # extracts version
-            cosign sign ghcr.io/"${GITHUB_REPOSITORY_OWNER}"/charts/"${name}":"${version}"
+            digest=$(cat .digest | awk -F "[, ]+" '/Digest/{print $NF}')
+            cosign sign ghcr.io/"${GITHUB_REPOSITORY_OWNER}"/charts/"${name}":"${digest}"
           done
