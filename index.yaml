@@ -54,6 +54,16 @@ entries:
   baz:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-11T18:26:36.218925243Z"
+    description: A Helm chart for Kubernetes
+    digest: 869f3dddf7f757ad574802f78c258d53c29487d192ec13ae82f9ef4481746ac5
+    name: baz
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/baz-0.3.0/baz-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-11T18:15:08.302196059Z"
     description: A Helm chart for Kubernetes
     digest: 27e33597e2cd9ef44c99b76f7bd6aa1de681cdf7036cfaa5af4183cff48bcf75
@@ -73,6 +83,16 @@ entries:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/baz-0.1.0/baz-0.1.0.tgz
     version: 0.1.0
   foo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-11T18:26:36.378237756Z"
+    description: A Helm chart for Kubernetes
+    digest: 074de7376c88e5dec17bf216272e8c13c19e0a9f75f1b18a55b5c1048b476476
+    name: foo
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/foo-0.3.0/foo-0.3.0.tgz
+    version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2022-11-11T18:15:08.522060267Z"
@@ -126,6 +146,16 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-11T18:26:36.513674707Z"
+    description: A Helm chart for Kubernetes
+    digest: 55830d7531d9614c6f695cdffaa6b93c58abe714182dbbef7b160cb1b7cdfcd7
+    name: hello-world
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/hello-world-0.3.0/hello-world-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-11T18:15:08.730063637Z"
     description: A Helm chart for Kubernetes
     digest: 919f01dc304e89c47f217da60155c2c5b8ba1ace4348ad1c10396484818d31fe
@@ -134,4 +164,4 @@ entries:
     urls:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/hello-world-0.1.0/hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-11T18:15:08.730119437Z"
+generated: "2022-11-11T18:26:36.513791207Z"
