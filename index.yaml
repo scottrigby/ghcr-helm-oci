@@ -3,6 +3,16 @@ entries:
   bar:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-11T18:32:42.750058499Z"
+    description: A Helm chart for Kubernetes
+    digest: 1bb26eb6878b94d980f96b3f56eae859c5b057c3789ac5521bcb963d57dd99f1
+    name: bar
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/bar-0.3.0/bar-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-11T18:15:08.065632397Z"
     description: A Helm chart for Kubernetes
     digest: ce29326941bc5e4f2e30efcc119b433c4fc9feeaca6e7c5e535be77b18427091
@@ -164,4 +174,4 @@ entries:
     urls:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/hello-world-0.1.0/hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-11T18:26:36.513791207Z"
+generated: "2022-11-11T18:32:42.750397904Z"
