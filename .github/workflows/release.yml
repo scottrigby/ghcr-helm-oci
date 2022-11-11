@@ -44,7 +44,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: sigstore/cosign-installer@main
-      - name: Push charts to GHCR
+      - name: Push charts to GHCR and sign
         env:
           COSIGN_EXPERIMENTAL: 1
         # when filling gaps with previously released charts, cr would create
