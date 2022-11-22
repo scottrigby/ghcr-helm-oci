@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "even-more-dashes-this-time.fullname" . }}
+  labels:
+    {{- include "even-more-dashes-this-time.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "even-more-dashes-this-time.selectorLabels" . | nindent 4 }}
