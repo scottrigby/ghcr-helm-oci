@@ -92,6 +92,17 @@ entries:
     urls:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/baz-0.1.0/baz-0.1.0.tgz
     version: 0.1.0
+  even-more-dashes-this-time:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-22T03:11:21.443723351Z"
+    description: A Helm chart for Kubernetes
+    digest: b101aec2a9ca20d84421ba33b51d0a395582e0f3ea3e0bc1ff064439d5e74f27
+    name: even-more-dashes-this-time
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/even-more-dashes-this-time-0.1.0/even-more-dashes-this-time-0.1.0.tgz
+    version: 0.1.0
   foo:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -174,4 +185,15 @@ entries:
     urls:
     - https://github.com/scottrigby/ghcr-helm-oci/releases/download/hello-world-0.1.0/hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-11T18:32:42.750397904Z"
+  hello-world-again:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-22T03:11:21.594128007Z"
+    description: A Helm chart for Kubernetes
+    digest: 55014d572d3c206444f3b6ddd1646de1be489c3703896bbcab69fbb35cee5c81
+    name: hello-world-again
+    type: application
+    urls:
+    - https://github.com/scottrigby/ghcr-helm-oci/releases/download/hello-world-again-0.1.0/hello-world-again-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-11-22T03:11:21.594161008Z"
