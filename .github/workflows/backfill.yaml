@@ -1,0 +1,10 @@
+name: Backfill versions
+
+on: workflow_dispatch
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          compgen -v GITHUB 
